@@ -1,0 +1,5 @@
+{{define "title"}}{{.Address}}{{end}}
+{{define "content"}}
+<h1>{{.Address}}</h1>
+<p>{{ range $i, $e := .AddressAliases}}{{if $i}}, {{end}}<span class="server-addr">{{$e}}</span>{{end}}</p>
+{{end}}

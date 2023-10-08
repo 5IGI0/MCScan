@@ -1,0 +1,20 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCScan - {{block "title" .}}No title{{end}}</title>
+    <link rel="stylesheet" href="/static/main.css">
+    {{block "headers" .}}{{end}}
+</head>
+<body>
+<div id="main-container">
+<form action="/search" method="get">
+    <input type="text" name="text" id="text" placeholder="A Minecraft Server" style="display:block; margin: auto;">
+</form>
+{{block "content" .}}'-'{{end}}
+</div>
+</body>
+</html>
+{{end}}

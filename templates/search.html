@@ -1,0 +1,24 @@
+{{define "title"}}search{{end}}
+{{define "content"}}
+{{range $server := .Servers}}
+<div class="server-card">
+    <div class="server-favicon-container">
+        <img class="server-favicon" src="/v1/favicon/{{$server.FaviconId}}" alt="{{$server.Address}}'s favicon">
+    </div>
+    <div class="server-desc-container">
+        <p>
+            <span class="server-addr">{{$server.Address}}</span><br>
+            <span class="server-desc">{{$server.NormalizedDesc}}</span><br>
+            <span class="server-desc"><!-- line 2 --></span>
+            <span class="server-player-count">{{$server.PlayerCount}}/{{$server.PlayerMax}}</span>
+        </p>
+    </div>
+    <div class="server-meta-container">
+        <p>version: <span title="version id: {{$server.VersionId}}" class="server-version">{{$server.VersionName}}</span></p>
+        <p>{{if $server.Mods}}{{len $server.Mods}} mods{{else}}no mod{{end}}</p>
+        <p>scanned {{time_relative $server.LastScan}}{{if u32greater $server.LastScan $server.LastSuccessScan}}, but were down. (last up: {{time_relative $server.LastSuccessScan}}){{end}}</p>
+    </div>
+</div>
+<hr>
+{{end}}
+{{end}}

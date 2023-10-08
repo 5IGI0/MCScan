@@ -1,0 +1,8 @@
+package main
+
+const (
+	MC_STATUS_VER     = 0x7FFF
+	SCAN_CONN_TIMEOUT = 5
+	SCAN_READ_TIMEOUT = 5
+	SCAN_INTERVAL     = 1200
+)

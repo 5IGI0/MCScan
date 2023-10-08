@@ -1,0 +1,70 @@
+html, body {
+    background-color: #111;
+    color:white;
+}
+
+#main-container {
+    width: 100%;
+    max-width: 750px;
+    display: block;
+    margin:auto;
+    background-color: #ffffff03;
+}
+
+.server-card {
+    background-color: #ffffff03;
+}
+
+.server-card:hover {
+    background-color: #ffffff06;
+}
+
+hr {
+    visibility: hidden;
+}
+
+
+.server-desc-container {
+    width: 75%;
+    max-width: calc(750px * 0.75);
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.server-favicon-container {
+    width: 10%;
+    max-width: calc(750px * 0.1);
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.server-favicon-container, .server-favicon {
+    height: 100%;
+}
+
+.server-desc-container > p {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.server-desc-container > p > .server-desc {
+    text-overflow: "…";
+    white-space: nowrap;
+    overflow: hidden;
+    width: 75%;
+    max-width: calc(750px * 0.75);
+    display: block;
+}
+
+.server-meta-container > p {
+    text-overflow: "…";
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    max-width: 750px;
+    display: inline-block;
+    margin: 0;
+}
